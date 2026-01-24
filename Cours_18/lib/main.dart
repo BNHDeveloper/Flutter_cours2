@@ -46,8 +46,11 @@ class _MyAppState extends State<HomeScreen> {
                         hintText: "Search",
                         border: InputBorder.none,
                         fillColor: Colors.grey[200],
-                        filled: true, 
-                        prefixIcon: Icon(Icons.search, fontWeight:FontWeight.bold,),
+                        filled: true,
+                        prefixIcon: Icon(
+                          Icons.search,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
@@ -63,7 +66,7 @@ class _MyAppState extends State<HomeScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                   Container(
+                  Container(
                     height: 70,
                     width: 70,
                     padding: EdgeInsets.all(10),
@@ -71,9 +74,9 @@ class _MyAppState extends State<HomeScreen> {
                       color: Colors.grey[200],
                       borderRadius: BorderRadius.circular(35),
                     ),
-                    child: Icon(Icons.home_outlined)
-                    ),
-                   Container(
+                    child: Icon(Icons.home_outlined),
+                  ),
+                  Container(
                     height: 70,
                     width: 70,
                     padding: EdgeInsets.all(10),
@@ -81,9 +84,9 @@ class _MyAppState extends State<HomeScreen> {
                       color: Colors.orange,
                       borderRadius: BorderRadius.circular(35),
                     ),
-                    child: Icon(Icons.car_rental,color: Colors.white,)
-                    ),
-                   Container(
+                    child: Icon(Icons.car_rental, color: Colors.white),
+                  ),
+                  Container(
                     height: 70,
                     width: 70,
                     padding: EdgeInsets.all(10),
@@ -91,9 +94,9 @@ class _MyAppState extends State<HomeScreen> {
                       color: Colors.grey[200],
                       borderRadius: BorderRadius.circular(35),
                     ),
-                    child: Icon(Icons.sunny)
-                    ),
-                   Container(
+                    child: Icon(Icons.sunny),
+                  ),
+                  Container(
                     height: 70,
                     width: 70,
                     padding: EdgeInsets.all(10),
@@ -101,8 +104,42 @@ class _MyAppState extends State<HomeScreen> {
                       color: Colors.grey[200],
                       borderRadius: BorderRadius.circular(35),
                     ),
-                    child: Icon(Icons.electric_bike)
+                    child: Icon(Icons.electric_bike),
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+              Text(
+                "Best Selling",
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 20),
+              GridView(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10,
+                  childAspectRatio: 3 / 4,
+                ),
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                children: [
+                  Card(
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: Image.network(
+                            'https://via.placeholder.com/150',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text('Item 1'),
+                        ),
+                      ],
                     ),
+                  ),
                 ],
               ),
             ],
