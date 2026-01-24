@@ -54,6 +54,57 @@ class _MyAppState extends State<HomeScreen> {
                   IconButton(icon: Icon(Icons.menu), onPressed: () {}),
                 ],
               ),
+              SizedBox(height: 20),
+              Text(
+                "Categories",
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                   Container(
+                    height: 70,
+                    width: 70,
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.circular(35),
+                    ),
+                    child: Icon(Icons.home_outlined)
+                    ),
+                   Container(
+                    height: 70,
+                    width: 70,
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.orange,
+                      borderRadius: BorderRadius.circular(35),
+                    ),
+                    child: Icon(Icons.car_rental,color: Colors.white,)
+                    ),
+                   Container(
+                    height: 70,
+                    width: 70,
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.circular(35),
+                    ),
+                    child: Icon(Icons.sunny)
+                    ),
+                   Container(
+                    height: 70,
+                    width: 70,
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.circular(35),
+                    ),
+                    child: Icon(Icons.electric_bike)
+                    ),
+                ],
+              ),
             ],
           ),
         ),
