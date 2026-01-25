@@ -128,14 +128,30 @@ class _MyAppState extends State<HomeScreen> {
                     child: Column(
                       children: [
                         Expanded(
-                          child: Image.network(
-                            'https://via.placeholder.com/150',
-                            fit: BoxFit.cover,
-                          ),
+                          child:Image.asset(
+                            'assets/img.png',
+                            fit: BoxFit.contain,
+                            ),
                         ),
                         Padding(
                           padding: EdgeInsets.all(8.0),
                           child: Text('Item 1'),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Card(
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child:Image.asset(
+                            'assets/img2.png',
+                            fit: BoxFit.contain,
+                            ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text('Item 2'),
                         ),
                       ],
                     ),
